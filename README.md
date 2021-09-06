@@ -1,3 +1,3 @@
 # forkify project
 
-aplicacion de recetas con api para buscar y guardar
+https://forkify-torr1co.netlify.app
