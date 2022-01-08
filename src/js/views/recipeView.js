@@ -1,7 +1,7 @@
 import View from './View.js'; // elemento padre
 // para que funcionen los iconos debes importarlos x q en el dist estan distintos
 import icons from 'url:../../img/icons.svg';
-import { Fraction } from 'fractional';
+import Fraction from 'fraction.js';
 //console.log(icons); // si los logeas tenes el icons en el nuevo path
 //console.log(Fraction); //ver si existe
 // 5ed6604591c37cdc054bc886
@@ -12,6 +12,7 @@ class RecipeView extends View {
   _message = '';
 
   //esta funcion sirve para separar la logica de la view, corre el programa cuando haya un handler
+
   addHandlerRender(handler) {
     // si cambia el hash o carga la pagina, se ejecuta el show recipe
     ['hashchange', 'load'].forEach(el => window.addEventListener(el, handler));
@@ -145,7 +146,7 @@ class RecipeView extends View {
     <use href="${icons}#icon-check"></use>
   </svg>
   <div class="recipe__quantity">${
-    ing.quantity ? new Fraction(ing.quantity).toString() : ''
+    ing.quantity ? new Fraction(ing.quantity).toFraction() : ''
   }</div>
   <div class="recipe__description">
     <span class="recipe__unit">${ing.unit}</span>
