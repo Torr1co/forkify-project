@@ -3,7 +3,7 @@ import icons from 'url:../../img/icons.svg';
 
 class addRecipeView extends View {
   _parentElement = document.querySelector('.upload');
-  _message = `Se cargo bien la receta :' D`;
+  _message = `The recipe was uploaded succesfully`;
 
   _window = document.querySelector('.add-recipe-window');
   _overlay = document.querySelector('.overlay');

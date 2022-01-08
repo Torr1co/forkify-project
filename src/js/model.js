@@ -70,7 +70,7 @@ export const loadSearchResults = async function (query) {
 
     const data = await AJAX(`${API_URL}?search=${query}&key=${KEY}`); // se le incluye nuestra kay para que cargue los resultados incluyendos los nuestros en
     // state.search.results = data.data.recipes; // a mi me aparece a partir de la primera
-    console.log(data.data.recipes);
+    // console.log(data.data.recipes);
     //de la forma de abajo queda mas legible de otra manera para que lo nombres sean iguales
     state.search.results = data.data.recipes.map(rec => {
       return {
@@ -88,7 +88,7 @@ export const loadSearchResults = async function (query) {
 
 export const getSearchResultsPage = function (page = 1) {
   state.search.page = page;
-  console.log(state.search.page);
+  // console.log(state.search.page);
   let start = (page - 1) * state.search.resultsPerPage; // 0
   let end = page * state.search.resultsPerPage; // 9
 
@@ -180,7 +180,7 @@ export const uploadRecipe = async function (newRecipe) {
     //falta agregarle los valores que nosotros le agregamos(el bookmarked) y la key entonces:
     addBookmark(state.recipe);
 
-    console.log(data);
+    // console.log(data);
   } catch (err) {
     throw err;
   }

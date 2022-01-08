@@ -109,7 +109,7 @@ const controlAddRecipe = async function (newRecipe) {
     //como es una funcion async, esta debe ser esperada con await y para eso esta funcion también debe ser async
     //cargamos la data de la nueva receta
     await model.uploadRecipe(newRecipe);
-    console.log(model.state.recipe);
+    // console.log(model.state.recipe);
 
     //renderizamos la receta
     recipeView.render(model.state.recipe);

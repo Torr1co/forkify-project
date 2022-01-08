@@ -8,7 +8,7 @@ import { Fraction } from 'fractional';
 
 class RecipeView extends View {
   _parentElement = document.querySelector('.recipe');
-  _errorMessage = 'Sorry brou, we don´t find the recipe, try another one';
+  _errorMessage = "Sorry , we don't find the recipe, try another one";
   _message = '';
 
   //esta funcion sirve para separar la logica de la view, corre el programa cuando haya un handler
@@ -112,8 +112,6 @@ class RecipeView extends View {
               ${this._data.ingredients
                 .map(this._generateMarkupIngredient)
                 .join('')}
-              
-              
             </ul>
           </div>
 
@@ -133,7 +131,7 @@ class RecipeView extends View {
             >
               <span>Directions</span>
               <svg class="search__icon">
-                <use href="${icons}_icon-arrow-right"></use>
+                <use href="${icons}#icon-arrow-right"></use>
               </svg>
             </a>
           </div>`;

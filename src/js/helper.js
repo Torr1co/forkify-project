@@ -1,7 +1,7 @@
 //tiene algunas funciones que ayudan al programa entero
 import { TIMEOUT_SEC } from './config.js';
 import { state } from './model.js';
-console.log(TIMEOUT_SEC);
+// console.log(TIMEOUT_SEC);
 //se le pone el timeout para que no corra por siempre
 const timeout = function (s) {
   return new Promise(function (_, reject) {
